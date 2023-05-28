@@ -30,7 +30,7 @@
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
 					<i class="fa fa-bars"></i>
 				</button>
-				<a class="navbar-brand" href="index.html">
+				<a class="navbar-brand" href="index.php">
 					<img src="assetscontent/img/logo-wm.png" class="logo logo-display" alt="wisatamalang" style="width : 80%">
 					<img src="assetscontent/img/logo-wm.png" class="logo logo-scrolled" alt="wisatamalang" style="width : 80%">
 				</a>
@@ -44,10 +44,8 @@
 
 
 				<ul class="nav navbar-nav navbar-right">
-					<li class="br-right"><a href="login.html"
-							style="color: black;"><i class="login-icon ti-user"></i><b>SIGN UP</b></a></li>
-					<li class="br-right"><a href="login.html"
-							style="color: black;"><i></i><b>LOG IN</b></a></li>
+					<li class="br-right"><a href="login.php" style="color: black;"><i class="login-icon ti-user"></i><b>SIGN UP</b></a></li>
+					<li class="br-right"><a href="login.php" style="color: black;"><i></i><b>LOG IN</b></a></li>
 				</ul>
 
 			</div>
@@ -80,14 +78,10 @@
 					<div class="tab" role="tabpanel">
 						<!-- Nav tabs -->
 						<ul class="nav nav-tabs" role="tablist">
-							<li role="presentation" class="active"><a href="#Overview" aria-controls="home" role="tab"
-									data-toggle="tab"><i class="ti-user"></i>Overview</a></li>
-							<li role="presentation"><a href="#Features" aria-controls="profile" role="tab"
-									data-toggle="tab"><i class="ti-settings"></i>Features</a></li>
-							<li role="presentation"><a href="#Review" aria-controls="messages" role="tab"
-									data-toggle="tab"><i class="ti-thumb-up"></i>Review</a></li>
-							<li role="presentation"><a href="#Photos" aria-controls="messages" role="tab"
-									data-toggle="tab"><i class="ti-gallery"></i>Photos</a></li>
+							<li role="presentation" class="active"><a href="#Overview" aria-controls="home" role="tab" data-toggle="tab"><i class="ti-user"></i>Overview</a></li>
+							<li role="presentation"><a href="#Features" aria-controls="profile" role="tab" data-toggle="tab"><i class="ti-settings"></i>Features</a></li>
+							<li role="presentation"><a href="#Review" aria-controls="messages" role="tab" data-toggle="tab"><i class="ti-thumb-up"></i>Review</a></li>
+							<li role="presentation"><a href="#Photos" aria-controls="messages" role="tab" data-toggle="tab"><i class="ti-gallery"></i>Photos</a></li>
 						</ul>
 						<!-- Tab panes -->
 					</div>
@@ -118,8 +112,7 @@
 
 											<div class="col-md-6 col-sm-6">
 												<div class="list-thumb-box">
-													<img src="https://asset-a.grid.id/crop/0x0:0x0/x/photo/2022/07/16/tiket-masuk-wisata-gunung-bromo-20220716075301.jpg"
-														class="img-responsive" alt="" />
+													<img src="https://asset-a.grid.id/crop/0x0:0x0/x/photo/2022/07/16/tiket-masuk-wisata-gunung-bromo-20220716075301.jpg" class="img-responsive" alt="" />
 													<a href="#" class="list-like left"><i class="ti-heart"></i></a>
 													<h5>4.8/<sub class="theme-cl">5</sub></h5>
 												</div>
@@ -222,9 +215,7 @@
 												<div class="row">
 													<div class="col-lg-10 col-9">
 														<div class="progress">
-															<div class="progress-bar progress-bar-success"
-																role="progressbar" style="width: 98%" aria-valuenow="98"
-																aria-valuemin="0" aria-valuemax="100"></div>
+															<div class="progress-bar progress-bar-success" role="progressbar" style="width: 98%" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
 														</div>
 													</div>
 													<div class="col-lg-2 col-3"><small><strong>5 stars</strong></small>
@@ -234,9 +225,7 @@
 												<div class="row">
 													<div class="col-lg-10 col-9">
 														<div class="progress">
-															<div class="progress-bar progress-bar-warning"
-																role="progressbar" style="width: 90%" aria-valuenow="90"
-																aria-valuemin="0" aria-valuemax="100"></div>
+															<div class="progress-bar progress-bar-warning" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
 														</div>
 													</div>
 													<div class="col-lg-2 col-3"><small><strong>4 stars</strong></small>
@@ -246,9 +235,7 @@
 												<div class="row">
 													<div class="col-lg-10 col-9">
 														<div class="progress">
-															<div class="progress-bar progress-bar-primary"
-																role="progressbar" style="width: 60%" aria-valuenow="60"
-																aria-valuemin="0" aria-valuemax="100"></div>
+															<div class="progress-bar progress-bar-primary" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
 														</div>
 													</div>
 													<div class="col-lg-2 col-3"><small><strong>3 stars</strong></small>
@@ -258,9 +245,7 @@
 												<div class="row">
 													<div class="col-lg-10 col-9">
 														<div class="progress">
-															<div class="progress-bar progress-bar-danger"
-																role="progressbar" style="width: 20%" aria-valuenow="20"
-																aria-valuemin="0" aria-valuemax="100"></div>
+															<div class="progress-bar progress-bar-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
 														</div>
 													</div>
 													<div class="col-lg-2 col-3"><small><strong>2 stars</strong></small>
@@ -270,9 +255,7 @@
 												<div class="row">
 													<div class="col-lg-10 col-9">
 														<div class="progress">
-															<div class="progress-bar" role="progressbar"
-																style="width: 10%" aria-valuenow="10" aria-valuemin="0"
-																aria-valuemax="100"></div>
+															<div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
 														</div>
 													</div>
 													<div class="col-lg-2 col-3"><small><strong>1 stars</strong></small>
@@ -337,8 +320,7 @@
 										<h4><i class="ti-map-alt"></i>Location</h4>
 									</div>
 									<div class="tr-single-body">
-										<div class="height-350" id="singleMap" data-latitude="-7.942965"
-											data-longitude="112.953186" data-mapTitle="Our Location"></div>
+										<div class="height-350" id="singleMap" data-latitude="-7.942965" data-longitude="112.953186" data-mapTitle="Our Location"></div>
 									</div>
 								</div>
 							</div>
@@ -406,8 +388,7 @@
 										<!-- Single Review -->
 										<div class="review-box">
 											<div class="review-thumb">
-												<img src="assetscontent/img/user-1.jpg" class="img-responsive img-circle"
-													alt="" />
+												<img src="assetscontent/img/user-1.jpg" class="img-responsive img-circle" alt="" />
 											</div>
 
 											<div class="review-box-content">
@@ -431,8 +412,7 @@
 										<!-- Single Review -->
 										<div class="review-box">
 											<div class="review-thumb">
-												<img src="assetscontent/img/user-2.jpg" class="img-responsive img-circle"
-													alt="" />
+												<img src="assetscontent/img/user-2.jpg" class="img-responsive img-circle" alt="" />
 											</div>
 
 											<div class="review-box-content">
@@ -456,8 +436,7 @@
 										<!-- Single Review -->
 										<div class="review-box">
 											<div class="review-thumb">
-												<img src="assetscontent/img/user-3.jpg" class="img-responsive img-circle"
-													alt="" />
+												<img src="assetscontent/img/user-3.jpg" class="img-responsive img-circle" alt="" />
 											</div>
 
 											<div class="review-box-content">
@@ -481,8 +460,7 @@
 										<!-- Single Review -->
 										<div class="review-box">
 											<div class="review-thumb">
-												<img src="assetscontent/img/user-4.jpg" class="img-responsive img-circle"
-													alt="" />
+												<img src="assetscontent/img/user-4.jpg" class="img-responsive img-circle" alt="" />
 											</div>
 
 											<div class="review-box-content">
@@ -506,8 +484,7 @@
 										<!-- Single Review -->
 										<div class="review-box">
 											<div class="review-thumb">
-												<img src="assetscontent/img/user-5.jpg" class="img-responsive img-circle"
-													alt="" />
+												<img src="assetscontent/img/user-5.jpg" class="img-responsive img-circle" alt="" />
 											</div>
 
 											<div class="review-box-content">
@@ -531,8 +508,7 @@
 										<!-- Single Review -->
 										<div class="review-box">
 											<div class="review-thumb">
-												<img src="assetscontent/img/user-6.jpg" class="img-responsive img-circle"
-													alt="" />
+												<img src="assetscontent/img/user-6.jpg" class="img-responsive img-circle" alt="" />
 											</div>
 
 											<div class="review-box-content">
@@ -571,56 +547,47 @@
 										<ul class="gallery-list">
 											<li>
 												<a data-fancybox="gallery" href="assetscontent/img/bromo1.jpg">
-													<img src="assetscontent/img/bromo1.jpg" class="img-responsive"
-														alt="">
+													<img src="assetscontent/img/bromo1.jpg" class="img-responsive" alt="">
 												</a>
 											</li>
 											<li>
 												<a data-fancybox="gallery" href="assetscontent/img/bromo2.jpg">
-													<img src="assetscontent/img/bromo2.jpg" class="img-responsive"
-														alt="">
+													<img src="assetscontent/img/bromo2.jpg" class="img-responsive" alt="">
 												</a>
 											</li>
 											<li>
 												<a data-fancybox="gallery" href="assetscontent/img/bromo3.jpg">
-													<img src="assetscontent/img/bromo3.jpg" class="img-responsive"
-														alt="">
+													<img src="assetscontent/img/bromo3.jpg" class="img-responsive" alt="">
 												</a>
 											</li>
 											<li>
 												<a data-fancybox="gallery" href="https://radarjember.jawapos.com/wp-content/uploads/2022/05/pendapatan-taman-nasional-bromo-tengger-semeru-capai-rp-27-miliar_m_-560x352-1.jpg">
-													<img src="https://radarjember.jawapos.com/wp-content/uploads/2022/05/pendapatan-taman-nasional-bromo-tengger-semeru-capai-rp-27-miliar_m_-560x352-1.jpg" class="img-responsive"
-														alt="">
+													<img src="https://radarjember.jawapos.com/wp-content/uploads/2022/05/pendapatan-taman-nasional-bromo-tengger-semeru-capai-rp-27-miliar_m_-560x352-1.jpg" class="img-responsive" alt="">
 												</a>
 											</li>
 											<li>
 												<a data-fancybox="gallery" href="https://gaetlokal.id/cni-content/uploads/modules/posts/20201029085036.png">
-													<img src="https://gaetlokal.id/cni-content/uploads/modules/posts/20201029085036.png" class="img-responsive"
-														alt="">
+													<img src="https://gaetlokal.id/cni-content/uploads/modules/posts/20201029085036.png" class="img-responsive" alt="">
 												</a>
 											</li>
 											<li>
 												<a data-fancybox="gallery" href="https://asset.kompas.com/crops/4eb8teuvt8A_mVll3I7ElxQGVPo=/0x0:1800x1200/750x500/data/photo/2021/05/10/609939a4dafef.jpg">
-													<img src="https://asset.kompas.com/crops/4eb8teuvt8A_mVll3I7ElxQGVPo=/0x0:1800x1200/750x500/data/photo/2021/05/10/609939a4dafef.jpg" class="img-responsive"
-														alt="">
+													<img src="https://asset.kompas.com/crops/4eb8teuvt8A_mVll3I7ElxQGVPo=/0x0:1800x1200/750x500/data/photo/2021/05/10/609939a4dafef.jpg" class="img-responsive" alt="">
 												</a>
 											</li>
 											<li>
 												<a data-fancybox="gallery" href="assetscontent/img/bromo5.jpg">
-													<img src="assetscontent/img/bromo5.jpg" class="img-responsive"
-														alt="">
+													<img src="assetscontent/img/bromo5.jpg" class="img-responsive" alt="">
 												</a>
 											</li>
 											<li>
 												<a data-fancybox="gallery" href="assetscontent/img/bromo6.jpg">
-													<img src="assetscontent/img/bromo6.jpg" class="img-responsive"
-														alt="">
+													<img src="assetscontent/img/bromo6.jpg" class="img-responsive" alt="">
 												</a>
 											</li>
 											<li>
 												<a data-fancybox="gallery" href="assetscontent/img/bromo7.jpg">
-													<img src="assetscontent/img/bromo7.jpg" class="img-responsive"
-														alt="">
+													<img src="assetscontent/img/bromo7.jpg" class="img-responsive" alt="">
 												</a>
 											</li>
 										</ul>
@@ -733,8 +700,7 @@
 								<div class="meta-item meta-comment fl-right">
 									<div class="view-box">
 										<div class="fl-right">
-											<h4 class="font-20"><span
-													class="theme-cl font-20">Rp350.000</span><sub>/
+											<h4 class="font-20"><span class="theme-cl font-20">Rp350.000</span><sub>/
 													Person</sub></h4>
 										</div>
 									</div>
@@ -869,10 +835,10 @@
 						<div class="col-md-4 col-sm-4">
 							<h4 style="color: black;"><b>Featured Destination</b></h4>
 							<ul>
-								<li><a href="content.html">Mount Bromo</a></li>
-								<li><a href="content.html">Coban Rondo</a></li>
-								<li><a href="content.html">Lembah Indah</a></li>
-								<li><a href="content.html">Balekambang Beach</a></li>
+								<li><a href="content.php">Mount Bromo</a></li>
+								<li><a href="content.php">Coban Rondo</a></li>
+								<li><a href="content.php">Lembah Indah</a></li>
+								<li><a href="content.php">Balekambang Beach</a></li>
 							</ul>
 						</div>
 						<div class="col-md-4 col-sm-4">
@@ -900,8 +866,7 @@
 						Timur 65145</p>
 					<p><i class="fa fa-phone"></i> Phone: (0341) 551611</p>
 					<p><i class="fa fa-whatsapp"></i> Whatsapp: +6281312345678</p>
-					<p><i class="fa fa-envelope"></i> Email: <a href="mailto:hello@domain.com"
-							style="color:black;">wisatamalang@tourism.com</a></p>
+					<p><i class="fa fa-envelope"></i> Email: <a href="mailto:hello@domain.com" style="color:black;">wisatamalang@tourism.com</a></p>
 
 				</div>
 
@@ -977,8 +942,7 @@
 										In With Facebook</a>
 								</div>
 								<div class="col-md-6">
-									<a href="#" title="" class="gplus-log-btn log-btn"><i
-											class="fa fa-google-plus"></i>Sign In With Google+</a>
+									<a href="#" title="" class="gplus-log-btn log-btn"><i class="fa fa-google-plus"></i>Sign In With Google+</a>
 								</div>
 							</div>
 
@@ -1020,8 +984,7 @@
 										In With Facebook</a>
 								</div>
 								<div class="col-md-6">
-									<a href="#" title="" class="gplus-log-btn log-btn"><i
-											class="fa fa-google-plus"></i>Sign In With Google+</a>
+									<a href="#" title="" class="gplus-log-btn log-btn"><i class="fa fa-google-plus"></i>Sign In With Google+</a>
 								</div>
 							</div>
 
@@ -1037,8 +1000,7 @@
 	<!-- End Sign Up Window -->
 
 	<!-- Switcher -->
-	<button class="w3-button w3-teal w3-xlarge w3-right" onclick="openRightMenu()"><i class="spin theme-cl fa fa-cog"
-			aria-hidden="true"></i></button>
+	<button class="w3-button w3-teal w3-xlarge w3-right" onclick="openRightMenu()"><i class="spin theme-cl fa fa-cog" aria-hidden="true"></i></button>
 	<div class="w3-sidebar w3-bar-block w3-card-2 w3-animate-right" style="display:none;right:0;" id="rightMenu">
 		<button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large theme-bg">Close &times;</button>
 		<ul id="styleOptions" title="switch styling">
@@ -1096,7 +1058,7 @@
 			"timePicker": true,
 			"startDate": "12/12/2018",
 			"endDate": "12/14/2018"
-		}, function (start, end, label) {
+		}, function(start, end, label) {
 			console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
 		});
 	</script>
@@ -1107,7 +1069,7 @@
 			"timePicker": true,
 			"startDate": "12/18/2018",
 			"endDate": "12/18/2018"
-		}, function (start, end, label) {
+		}, function(start, end, label) {
 			console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
 		});
 	</script>
@@ -1117,13 +1079,14 @@
 		function openRightMenu() {
 			document.getElementById("rightMenu").style.display = "block";
 		}
+
 		function closeRightMenu() {
 			document.getElementById("rightMenu").style.display = "none";
 		}
 	</script>
 
 	<script type="text/javascript">
-		$(document).ready(function () {
+		$(document).ready(function() {
 			$('#styleOptions').styleSwitcher();
 		});
 	</script>
