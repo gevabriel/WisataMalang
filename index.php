@@ -63,7 +63,7 @@
               } else {
 
               ?>
-                <h3>Welcome, <?php echo $_SESSION['username']; ?></h3>
+                <li><a><b>Welcome, <?php echo $_SESSION['username']; ?></b></a></li>
                 <li><a href="logout.php"><b>LOG OUT</b></a></li>
               <?php
               }

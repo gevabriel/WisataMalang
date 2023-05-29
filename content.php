@@ -44,8 +44,23 @@
 
 
 				<ul class="nav navbar-nav navbar-right">
-					<li class="br-right"><a href="login.php" style="color: black;"><i class="login-icon ti-user"></i><b>SIGN UP</b></a></li>
-					<li class="br-right"><a href="login.php" style="color: black;"><i></i><b>LOG IN</b></a></li>
+					<?php
+					session_start(); // Start the session
+
+					// Check if the 'username' key exists in the $_SESSION array
+					if (!isset($_SESSION['username'])) {
+					?>
+						<li><a href="register.php"><b>SIGN UP</b></a></li>
+						<li><a href="login.php"><b>LOG IN</b></a></li>
+					<?php
+					} else {
+
+					?>
+						<li><a><b>Welcome, <?php echo $_SESSION['username']; ?></b></a></li>
+						<li><a href="logout.php"><b>LOG OUT</b></a></li>
+					<?php
+					}
+					?>
 				</ul>
 
 			</div>
