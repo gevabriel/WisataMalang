@@ -544,7 +544,25 @@
 
 										</div>
 
+										<!-- Comment Textbox -->
+										<?php
+										if (!isset($_SESSION['username'])) {
+										?>
+											<div></div>
+										<?php
+										} else {
+										?>
+											<form action="" method="post">
+												<h4>Comment</h4>
+												<textarea name="" id="" style="height: 100px; width: 750px; border-radius: 5px;"></textarea> <br>
+												<input type="submit" value="Submit" formaction="" style="color: #fff; background: crimson; border-radius: 5px;">
+											</form>
+										<?php
+										}
+										?>
+
 									</div>
+
 								</div>
 
 							</div>
