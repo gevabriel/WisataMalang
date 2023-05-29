@@ -553,10 +553,10 @@
 										<?php
 										} else {
 										?>
-											<form action="" method="post">
+											<form action="" method="POST">
 												<h4>Comment</h4>
-												<textarea name="" id="" style="height: 100px; width: 750px; border-radius: 5px;"></textarea> <br>
-												<input type="submit" value="Submit" formaction="" style="color: #fff; background: crimson; border-radius: 5px;">
+												<textarea name="comment" id="comment" style="height: 100px; width: 750px; border-radius: 5px;"></textarea> <br>
+												<input type="submit" name="post_comment" value="Submit" formaction="reviews.php" style="color: #fff; background: crimson; border-radius: 5px;">
 											</form>
 										<?php
 										}
