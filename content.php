@@ -335,7 +335,8 @@
 										<h4><i class="ti-map-alt"></i>Location</h4>
 									</div>
 									<div class="tr-single-body">
-										<div class="height-350" id="singleMap" data-latitude="-7.942965" data-longitude="112.953186" data-mapTitle="Our Location"></div>
+										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15806.180047325457!2d112.94271244575444!3d-7.942493323305622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd637aaab794a41%3A0xada40d36ecd2a5dd!2sGn.%20Bromo!5e0!3m2!1sid!2sid!4v1685368132616!5m2!1sid!2sid" width="750" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+										<!-- <div class="height-350" id="singleMap" data-latitude="-7.942965" data-longitude="112.953186" data-mapTitle="Our Location"></div> -->
 									</div>
 								</div>
 							</div>
