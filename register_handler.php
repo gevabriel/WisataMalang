@@ -1,6 +1,6 @@
 <?php
 
-$mysqli = mysqli_connect("localhost", "root", "220403", "wisatamalang");
+$mysqli = mysqli_connect("localhost", "root", "", "wisatamalang");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];

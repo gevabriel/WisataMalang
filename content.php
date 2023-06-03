@@ -555,7 +555,8 @@
 										?>
 											<form action="" method="POST">
 												<h4>Comment</h4>
-												<textarea name="comment" id="comment" style="height: 100px; width: 750px; border-radius: 5px;"></textarea> <br>
+												<input type="text" name="name" id="name" placeholder="Nama" style="height: auto; width: 750px; border-radius: 5px;"> <br>
+												<textarea name="comment" id="comment" placeholder="Komentar" style="height: 100px; width: 750px; border-radius: 5px;"></textarea> <br>
 												<input type="submit" name="post_comment" value="Submit" formaction="reviews_handler.php" style="color: #fff; background: crimson; border-radius: 5px;">
 											</form>
 										<?php

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$mysqli = mysqli_connect("localhost", "root", "220403", "wisatamalang");
+$mysqli = mysqli_connect("localhost", "root", "", "wisatamalang");
 $error_message = "";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
