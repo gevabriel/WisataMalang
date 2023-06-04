@@ -7,11 +7,11 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$name = $_POST['name'];
+$guest = $_POST['guest'];
 $comment = $_POST['comment'];
 
 if (isset($_POST['post_comment'])) {
-    $sql = "INSERT INTO reviews (name, comment) VALUES ('$name, $comment')";
+    $sql = "INSERT INTO reviews (guest, comment) VALUES ('$guest', '$comment')";
     echo "<script> alert('Comment Submitted'); </script>";
     header("Location: content.php");
 }
