@@ -10,8 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = mysqli_real_escape_string($mysqli, $password);
 
     try {
-        $query = "INSERT INTO user (username, password)
-              VALUES ('$username', '$password')";
+        $query = "INSERT INTO user (username, password) VALUES ('$username', '$password')";
 
         $result = mysqli_query($mysqli, $query);
 
