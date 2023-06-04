@@ -578,32 +578,6 @@
 										mysqli_close($conn);
 										?>
 
-
-										<!-- Single Review -->
-										<div class="review-box">
-											<div class="review-thumb">
-												<img src="assetscontent/img/user-6.jpg"
-													class="img-responsive img-circle" alt="" />
-											</div>
-
-											<div class="review-box-content">
-												<div class="reviewer-rate">
-													<p><i class="fa fa-star cl-warning"></i>4.7/<span>5</span></p>
-												</div>
-												<div class="review-user-info">
-													<h4>Shilka Rai</h4>
-													<p>Et Harum Quidem Rerum Facilis Est Et Expedita Distinctio. Nam
-														Libero Tempore, Cum Soluta Nobis Est Eligendi Optio Cumque Nihil
-														Impedit Quo Minus Id Quod Maxime Placeat Facere Possimus</p>
-												</div>
-												<div class="review-lc text-right">
-													<a href="#"><i class="ti-heart"></i>120</a>
-													<a href="#"><i class="ti-comment"></i>140</a>
-												</div>
-											</div>
-
-										</div>
-
 										<!-- Comment Textbox -->
 										<?php
 										if (!isset($_SESSION['username'])) {
