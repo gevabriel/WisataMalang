@@ -1,3 +1,11 @@
+<?php
+
+// include 'reviews_handler.php';
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,8 +39,10 @@
 					<i class="fa fa-bars"></i>
 				</button>
 				<a class="navbar-brand" href="index.php">
-					<img src="assetscontent/img/logo-wm.png" class="logo logo-display" alt="wisatamalang" style="width : 80%">
-					<img src="assetscontent/img/logo-wm.png" class="logo logo-scrolled" alt="wisatamalang" style="width : 80%">
+					<img src="assetscontent/img/logo-wm.png" class="logo logo-display" alt="wisatamalang"
+						style="width : 80%">
+					<img src="assetscontent/img/logo-wm.png" class="logo logo-scrolled" alt="wisatamalang"
+						style="width : 80%">
 				</a>
 
 			</div>
@@ -46,19 +56,21 @@
 				<ul class="nav navbar-nav navbar-right">
 					<?php
 					session_start(); // Start the session
-
+					
 					// Check if the 'username' key exists in the $_SESSION array
 					if (!isset($_SESSION['username'])) {
-					?>
+						?>
 						<li><a href="register.php"><b>SIGN UP</b></a></li>
 						<li><a href="login.php"><b>LOG IN</b></a></li>
-					<?php
+						<?php
 					} else {
 
-					?>
-						<li><a><b>Welcome, <?php echo $_SESSION['username']; ?></b></a></li>
+						?>
+						<li><a><b>Welcome,
+									<?php echo $_SESSION['username']; ?>
+								</b></a></li>
 						<li><a href="logout.php"><b>LOG OUT</b></a></li>
-					<?php
+						<?php
 					}
 					?>
 				</ul>
@@ -70,7 +82,8 @@
 	<!-- ======================= End Navigation ===================== -->
 
 	<!-- ======================= Start Banner ===================== -->
-	<section class="page-title-banner" style="background-image:url(assetscontent/img/mountainous-landscape-with-fog.jpg);">
+	<section class="page-title-banner"
+		style="background-image:url(assetscontent/img/mountainous-landscape-with-fog.jpg);">
 		<div class="container">
 			<div class="row">
 				<div class="tr-list-detail">
@@ -93,10 +106,14 @@
 					<div class="tab" role="tabpanel">
 						<!-- Nav tabs -->
 						<ul class="nav nav-tabs" role="tablist">
-							<li role="presentation" class="active"><a href="#Overview" aria-controls="home" role="tab" data-toggle="tab"><i class="ti-user"></i>Overview</a></li>
-							<li role="presentation"><a href="#Features" aria-controls="profile" role="tab" data-toggle="tab"><i class="ti-settings"></i>Features</a></li>
-							<li role="presentation"><a href="#Review" aria-controls="messages" role="tab" data-toggle="tab"><i class="ti-thumb-up"></i>Review</a></li>
-							<li role="presentation"><a href="#Photos" aria-controls="messages" role="tab" data-toggle="tab"><i class="ti-gallery"></i>Photos</a></li>
+							<li role="presentation" class="active"><a href="#Overview" aria-controls="home" role="tab"
+									data-toggle="tab"><i class="ti-user"></i>Overview</a></li>
+							<li role="presentation"><a href="#Features" aria-controls="profile" role="tab"
+									data-toggle="tab"><i class="ti-settings"></i>Features</a></li>
+							<li role="presentation"><a href="#Review" aria-controls="messages" role="tab"
+									data-toggle="tab"><i class="ti-thumb-up"></i>Review</a></li>
+							<li role="presentation"><a href="#Photos" aria-controls="messages" role="tab"
+									data-toggle="tab"><i class="ti-gallery"></i>Photos</a></li>
 						</ul>
 						<!-- Tab panes -->
 					</div>
@@ -127,7 +144,8 @@
 
 											<div class="col-md-6 col-sm-6">
 												<div class="list-thumb-box">
-													<img src="https://asset-a.grid.id/crop/0x0:0x0/x/photo/2022/07/16/tiket-masuk-wisata-gunung-bromo-20220716075301.jpg" class="img-responsive" alt="" />
+													<img src="https://asset-a.grid.id/crop/0x0:0x0/x/photo/2022/07/16/tiket-masuk-wisata-gunung-bromo-20220716075301.jpg"
+														class="img-responsive" alt="" />
 													<a href="#" class="list-like left"><i class="ti-heart"></i></a>
 													<h5>4.8/<sub class="theme-cl">5</sub></h5>
 												</div>
@@ -230,7 +248,9 @@
 												<div class="row">
 													<div class="col-lg-10 col-9">
 														<div class="progress">
-															<div class="progress-bar progress-bar-success" role="progressbar" style="width: 98%" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+															<div class="progress-bar progress-bar-success"
+																role="progressbar" style="width: 98%" aria-valuenow="98"
+																aria-valuemin="0" aria-valuemax="100"></div>
 														</div>
 													</div>
 													<div class="col-lg-2 col-3"><small><strong>5 stars</strong></small>
@@ -240,7 +260,9 @@
 												<div class="row">
 													<div class="col-lg-10 col-9">
 														<div class="progress">
-															<div class="progress-bar progress-bar-warning" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+															<div class="progress-bar progress-bar-warning"
+																role="progressbar" style="width: 90%" aria-valuenow="90"
+																aria-valuemin="0" aria-valuemax="100"></div>
 														</div>
 													</div>
 													<div class="col-lg-2 col-3"><small><strong>4 stars</strong></small>
@@ -250,7 +272,9 @@
 												<div class="row">
 													<div class="col-lg-10 col-9">
 														<div class="progress">
-															<div class="progress-bar progress-bar-primary" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+															<div class="progress-bar progress-bar-primary"
+																role="progressbar" style="width: 60%" aria-valuenow="60"
+																aria-valuemin="0" aria-valuemax="100"></div>
 														</div>
 													</div>
 													<div class="col-lg-2 col-3"><small><strong>3 stars</strong></small>
@@ -260,7 +284,9 @@
 												<div class="row">
 													<div class="col-lg-10 col-9">
 														<div class="progress">
-															<div class="progress-bar progress-bar-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+															<div class="progress-bar progress-bar-danger"
+																role="progressbar" style="width: 20%" aria-valuenow="20"
+																aria-valuemin="0" aria-valuemax="100"></div>
 														</div>
 													</div>
 													<div class="col-lg-2 col-3"><small><strong>2 stars</strong></small>
@@ -270,7 +296,9 @@
 												<div class="row">
 													<div class="col-lg-10 col-9">
 														<div class="progress">
-															<div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+															<div class="progress-bar" role="progressbar"
+																style="width: 10%" aria-valuenow="10" aria-valuemin="0"
+																aria-valuemax="100"></div>
 														</div>
 													</div>
 													<div class="col-lg-2 col-3"><small><strong>1 stars</strong></small>
@@ -335,7 +363,10 @@
 										<h4><i class="ti-map-alt"></i>Location</h4>
 									</div>
 									<div class="tr-single-body">
-										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15806.180047325457!2d112.94271244575444!3d-7.942493323305622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd637aaab794a41%3A0xada40d36ecd2a5dd!2sGn.%20Bromo!5e0!3m2!1sid!2sid!4v1685368132616!5m2!1sid!2sid" width="750" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+										<iframe
+											src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15806.180047325457!2d112.94271244575444!3d-7.942493323305622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd637aaab794a41%3A0xada40d36ecd2a5dd!2sGn.%20Bromo!5e0!3m2!1sid!2sid!4v1685368132616!5m2!1sid!2sid"
+											width="750" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+											referrerpolicy="no-referrer-when-downgrade"></iframe>
 										<!-- <div class="height-350" id="singleMap" data-latitude="-7.942965" data-longitude="112.953186" data-mapTitle="Our Location"></div> -->
 									</div>
 								</div>
@@ -404,7 +435,8 @@
 										<!-- Single Review -->
 										<div class="review-box">
 											<div class="review-thumb">
-												<img src="assetscontent/img/user-1.jpg" class="img-responsive img-circle" alt="" />
+												<img src="assetscontent/img/user-1.jpg"
+													class="img-responsive img-circle" alt="" />
 											</div>
 
 											<div class="review-box-content">
@@ -428,7 +460,8 @@
 										<!-- Single Review -->
 										<div class="review-box">
 											<div class="review-thumb">
-												<img src="assetscontent/img/user-2.jpg" class="img-responsive img-circle" alt="" />
+												<img src="assetscontent/img/user-2.jpg"
+													class="img-responsive img-circle" alt="" />
 											</div>
 
 											<div class="review-box-content">
@@ -452,7 +485,8 @@
 										<!-- Single Review -->
 										<div class="review-box">
 											<div class="review-thumb">
-												<img src="assetscontent/img/user-3.jpg" class="img-responsive img-circle" alt="" />
+												<img src="assetscontent/img/user-3.jpg"
+													class="img-responsive img-circle" alt="" />
 											</div>
 
 											<div class="review-box-content">
@@ -476,7 +510,8 @@
 										<!-- Single Review -->
 										<div class="review-box">
 											<div class="review-thumb">
-												<img src="assetscontent/img/user-4.jpg" class="img-responsive img-circle" alt="" />
+												<img src="assetscontent/img/user-4.jpg"
+													class="img-responsive img-circle" alt="" />
 											</div>
 
 											<div class="review-box-content">
@@ -497,34 +532,58 @@
 
 										</div>
 
+										<?php
+										$conn = mysqli_connect('localhost', 'root', '', 'wisatamalang');
+										$sql = "SELECT * FROM reviews";
+										$result = mysqli_query($conn, $sql);
+
+										if (!$conn) {
+											die("Koneksi gagal: " . mysqli_connect_error());
+										}
+										// session_start();
+										
+
+
+										// if ($result > 0) {
+										// output data of each row
+										while ($row = mysqli_fetch_assoc($result)) {
+											?>
+											<div class="review-box">
+												<div class="review-thumb">
+														<img src="assetscontent/img/user-5.jpg"
+															class="img-responsive img-circle" alt="" />
+													</div>
+
+												<div class="review-box-content">
+													<div class="reviewer-rate">
+															<p><i class="fa fa-star cl-warning"></i>4.8/<span>5</span></p>
+														</div>
+													<div class="review-user-info">
+														<h4>
+															<?php echo $row["guest"]; ?>
+														</h4>
+														<p>
+															<?php echo $row["comment"]; ?>
+														</p>
+													</div>
+													<div class="review-lc text-right">
+															<a href="#"><i class="ti-heart"></i>80</a>
+															<a href="#"><i class="ti-comment"></i>70</a>
+														</div>
+												</div>
+
+											</div>
+
+										<?php }
+										mysqli_close($conn);
+										?>
+
+
 										<!-- Single Review -->
 										<div class="review-box">
 											<div class="review-thumb">
-												<img src="assetscontent/img/user-5.jpg" class="img-responsive img-circle" alt="" />
-											</div>
-
-											<div class="review-box-content">
-												<div class="reviewer-rate">
-													<p><i class="fa fa-star cl-warning"></i>4.8/<span>5</span></p>
-												</div>
-												<div class="review-user-info">
-													<h4>Duke Divalkis</h4>
-													<p>Et Harum Quidem Rerum Facilis Est Et Expedita Distinctio. Nam
-														Libero Tempore, Cum Soluta Nobis Est Eligendi Optio Cumque Nihil
-														Impedit Quo Minus Id Quod Maxime Placeat Facere Possimus</p>
-												</div>
-												<div class="review-lc text-right">
-													<a href="#"><i class="ti-heart"></i>80</a>
-													<a href="#"><i class="ti-comment"></i>70</a>
-												</div>
-											</div>
-
-										</div>
-
-										<!-- Single Review -->
-										<div class="review-box">
-											<div class="review-thumb">
-												<img src="assetscontent/img/user-6.jpg" class="img-responsive img-circle" alt="" />
+												<img src="assetscontent/img/user-6.jpg"
+													class="img-responsive img-circle" alt="" />
 											</div>
 
 											<div class="review-box-content">
@@ -548,18 +607,23 @@
 										<!-- Comment Textbox -->
 										<?php
 										if (!isset($_SESSION['username'])) {
-										?>
+											?>
 											<div></div>
-										<?php
+											<?php
 										} else {
-										?>
+											?>
 											<form action="" method="POST">
 												<h4>Comment</h4>
-												<input type="text" name="name" id="name" placeholder="Nama" style="height: auto; width: 750px; border-radius: 5px;"> <br>
-												<textarea name="comment" id="comment" placeholder="Komentar" style="height: 100px; width: 750px; border-radius: 5px;"></textarea> <br>
-												<input type="submit" name="post_comment" value="Submit" formaction="reviews_handler.php" style="color: #fff; background: crimson; border-radius: 5px;">
+												<input name="guest" id="guest" placeholder="Nama"
+													style="height: auto; width: 750px; border-radius: 5px;"> <br>
+												<textarea name="comment" id="comment" placeholder="Komentar"
+													style="height: 100px; width: 750px; border-radius: 5px;"></textarea>
+												<br>
+												<input type="submit" name="post_comment" value="Submit"
+													formaction="reviews_handler.php"
+													style="color: #fff; background: crimson; border-radius: 5px;">
 											</form>
-										<?php
+											<?php
 										}
 										?>
 
@@ -582,47 +646,59 @@
 										<ul class="gallery-list">
 											<li>
 												<a data-fancybox="gallery" href="assetscontent/img/bromo1.jpg">
-													<img src="assetscontent/img/bromo1.jpg" class="img-responsive" alt="">
+													<img src="assetscontent/img/bromo1.jpg" class="img-responsive"
+														alt="">
 												</a>
 											</li>
 											<li>
 												<a data-fancybox="gallery" href="assetscontent/img/bromo2.jpg">
-													<img src="assetscontent/img/bromo2.jpg" class="img-responsive" alt="">
+													<img src="assetscontent/img/bromo2.jpg" class="img-responsive"
+														alt="">
 												</a>
 											</li>
 											<li>
 												<a data-fancybox="gallery" href="assetscontent/img/bromo3.jpg">
-													<img src="assetscontent/img/bromo3.jpg" class="img-responsive" alt="">
+													<img src="assetscontent/img/bromo3.jpg" class="img-responsive"
+														alt="">
 												</a>
 											</li>
 											<li>
-												<a data-fancybox="gallery" href="https://radarjember.jawapos.com/wp-content/uploads/2022/05/pendapatan-taman-nasional-bromo-tengger-semeru-capai-rp-27-miliar_m_-560x352-1.jpg">
-													<img src="https://radarjember.jawapos.com/wp-content/uploads/2022/05/pendapatan-taman-nasional-bromo-tengger-semeru-capai-rp-27-miliar_m_-560x352-1.jpg" class="img-responsive" alt="">
+												<a data-fancybox="gallery"
+													href="https://radarjember.jawapos.com/wp-content/uploads/2022/05/pendapatan-taman-nasional-bromo-tengger-semeru-capai-rp-27-miliar_m_-560x352-1.jpg">
+													<img src="https://radarjember.jawapos.com/wp-content/uploads/2022/05/pendapatan-taman-nasional-bromo-tengger-semeru-capai-rp-27-miliar_m_-560x352-1.jpg"
+														class="img-responsive" alt="">
 												</a>
 											</li>
 											<li>
-												<a data-fancybox="gallery" href="https://gaetlokal.id/cni-content/uploads/modules/posts/20201029085036.png">
-													<img src="https://gaetlokal.id/cni-content/uploads/modules/posts/20201029085036.png" class="img-responsive" alt="">
+												<a data-fancybox="gallery"
+													href="https://gaetlokal.id/cni-content/uploads/modules/posts/20201029085036.png">
+													<img src="https://gaetlokal.id/cni-content/uploads/modules/posts/20201029085036.png"
+														class="img-responsive" alt="">
 												</a>
 											</li>
 											<li>
-												<a data-fancybox="gallery" href="https://asset.kompas.com/crops/4eb8teuvt8A_mVll3I7ElxQGVPo=/0x0:1800x1200/750x500/data/photo/2021/05/10/609939a4dafef.jpg">
-													<img src="https://asset.kompas.com/crops/4eb8teuvt8A_mVll3I7ElxQGVPo=/0x0:1800x1200/750x500/data/photo/2021/05/10/609939a4dafef.jpg" class="img-responsive" alt="">
+												<a data-fancybox="gallery"
+													href="https://asset.kompas.com/crops/4eb8teuvt8A_mVll3I7ElxQGVPo=/0x0:1800x1200/750x500/data/photo/2021/05/10/609939a4dafef.jpg">
+													<img src="https://asset.kompas.com/crops/4eb8teuvt8A_mVll3I7ElxQGVPo=/0x0:1800x1200/750x500/data/photo/2021/05/10/609939a4dafef.jpg"
+														class="img-responsive" alt="">
 												</a>
 											</li>
 											<li>
 												<a data-fancybox="gallery" href="assetscontent/img/bromo5.jpg">
-													<img src="assetscontent/img/bromo5.jpg" class="img-responsive" alt="">
+													<img src="assetscontent/img/bromo5.jpg" class="img-responsive"
+														alt="">
 												</a>
 											</li>
 											<li>
 												<a data-fancybox="gallery" href="assetscontent/img/bromo6.jpg">
-													<img src="assetscontent/img/bromo6.jpg" class="img-responsive" alt="">
+													<img src="assetscontent/img/bromo6.jpg" class="img-responsive"
+														alt="">
 												</a>
 											</li>
 											<li>
 												<a data-fancybox="gallery" href="assetscontent/img/bromo7.jpg">
-													<img src="assetscontent/img/bromo7.jpg" class="img-responsive" alt="">
+													<img src="assetscontent/img/bromo7.jpg" class="img-responsive"
+														alt="">
 												</a>
 											</li>
 										</ul>
@@ -901,7 +977,8 @@
 						Timur 65145</p>
 					<p><i class="fa fa-phone"></i> Phone: (0341) 551611</p>
 					<p><i class="fa fa-whatsapp"></i> Whatsapp: +6281312345678</p>
-					<p><i class="fa fa-envelope"></i> Email: <a href="mailto:hello@domain.com" style="color:black;">wisatamalang@tourism.com</a></p>
+					<p><i class="fa fa-envelope"></i> Email: <a href="mailto:hello@domain.com"
+							style="color:black;">wisatamalang@tourism.com</a></p>
 
 				</div>
 
@@ -924,7 +1001,8 @@
 		<div class="modal-dialog">
 			<div class="modal-content" id="myModalLabel1">
 				<div class="modal-body">
-					<div class="text-center"><img src="assetscontent/img/logo-wm.png" class="img-responsive" alt=""></div>
+					<div class="text-center"><img src="assetscontent/img/logo-wm.png" class="img-responsive" alt="">
+					</div>
 
 					<!-- Nav tabs -->
 					<ul class="nav nav-tabs nav-advance theme-bg" role="tablist">
@@ -977,7 +1055,8 @@
 										In With Facebook</a>
 								</div>
 								<div class="col-md-6">
-									<a href="#" title="" class="gplus-log-btn log-btn"><i class="fa fa-google-plus"></i>Sign In With Google+</a>
+									<a href="#" title="" class="gplus-log-btn log-btn"><i
+											class="fa fa-google-plus"></i>Sign In With Google+</a>
 								</div>
 							</div>
 
@@ -1019,7 +1098,8 @@
 										In With Facebook</a>
 								</div>
 								<div class="col-md-6">
-									<a href="#" title="" class="gplus-log-btn log-btn"><i class="fa fa-google-plus"></i>Sign In With Google+</a>
+									<a href="#" title="" class="gplus-log-btn log-btn"><i
+											class="fa fa-google-plus"></i>Sign In With Google+</a>
 								</div>
 							</div>
 
@@ -1035,7 +1115,8 @@
 	<!-- End Sign Up Window -->
 
 	<!-- Switcher -->
-	<button class="w3-button w3-teal w3-xlarge w3-right" onclick="openRightMenu()"><i class="spin theme-cl fa fa-cog" aria-hidden="true"></i></button>
+	<button class="w3-button w3-teal w3-xlarge w3-right" onclick="openRightMenu()"><i class="spin theme-cl fa fa-cog"
+			aria-hidden="true"></i></button>
 	<div class="w3-sidebar w3-bar-block w3-card-2 w3-animate-right" style="display:none;right:0;" id="rightMenu">
 		<button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large theme-bg">Close &times;</button>
 		<ul id="styleOptions" title="switch styling">
@@ -1093,7 +1174,7 @@
 			"timePicker": true,
 			"startDate": "12/12/2018",
 			"endDate": "12/14/2018"
-		}, function(start, end, label) {
+		}, function (start, end, label) {
 			console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
 		});
 	</script>
@@ -1104,7 +1185,7 @@
 			"timePicker": true,
 			"startDate": "12/18/2018",
 			"endDate": "12/18/2018"
-		}, function(start, end, label) {
+		}, function (start, end, label) {
 			console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
 		});
 	</script>
@@ -1121,7 +1202,7 @@
 	</script>
 
 	<script type="text/javascript">
-		$(document).ready(function() {
+		$(document).ready(function () {
 			$('#styleOptions').styleSwitcher();
 		});
 	</script>

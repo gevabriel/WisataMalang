@@ -31,8 +31,10 @@
 					<i class="fa fa-bars"></i>
 				</button>
 				<a class="navbar-brand" href="index.php">
-					<img src="assetslisting/img/logo.png" class="logo logo-display" alt="wisatamalang" style="width : 80%">
-					<img src="assetslisting/img/logo.png" class="logo logo-scrolled" alt="wisatamalang" style="width : 80%">
+					<img src="assetslisting/img/logo.png" class="logo logo-display" alt="wisatamalang"
+						style="width : 80%">
+					<img src="assetslisting/img/logo.png" class="logo logo-scrolled" alt="wisatamalang"
+						style="width : 80%">
 				</a>
 
 			</div>
@@ -46,19 +48,21 @@
 				<ul class="nav navbar-nav navbar-right">
 					<?php
 					session_start(); // Start the session
-
+					
 					// Check if the 'username' key exists in the $_SESSION array
 					if (!isset($_SESSION['username'])) {
-					?>
+						?>
 						<li><a href="register.php"><b>SIGN UP</b></a></li>
 						<li><a href="login.php"><b>LOG IN</b></a></li>
-					<?php
+						<?php
 					} else {
 
-					?>
-						<li><a><b>Welcome, <?php echo $_SESSION['username']; ?></b></a></li>
+						?>
+						<li><a><b>Welcome,
+									<?php echo $_SESSION['username']; ?>
+								</b></a></li>
 						<li><a href="logout.php"><b>LOG OUT</b></a></li>
-					<?php
+						<?php
 					}
 					?>
 				</ul>
@@ -91,7 +95,8 @@
 					<div class="tr-single-box">
 						<div class="tr-single-header">
 							<h4>Filter</h4>
-							<span class="pull-right clickables" data-toggle="collapse" data-target="#filter"><i class="ti-align-left"></i></span>
+							<span class="pull-right clickables" data-toggle="collapse" data-target="#filter"><i
+									class="ti-align-left"></i></span>
 						</div>
 						<div id="filter" class="collapse in">
 
@@ -372,7 +377,8 @@
 							<div class="col-sm-9 text-right">
 
 								<div class="btn-group mr-lg-2">
-									<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+										aria-haspopup="true" aria-expanded="false">
 										Sort By
 									</button>
 									<div class="dropdown-menu pull-right animated flipInX">
@@ -391,407 +397,91 @@
 					<!-- Row -->
 					<div class="row">
 
-						<!-- DATA 1 -->
-						<div class="col-md-12 col-sm-12">
-							<article class="hotel-box list-style">
-								<div class="row">
 
-									<div class="col-md-5 col-sm-5">
-										<div class="hotel-box-image">
-											<a href="content.php">
-												<img src="https://asset-a.grid.id/crop/0x0:0x0/x/photo/2022/07/16/tiket-masuk-wisata-gunung-bromo-20220716075301.jpg" class="img-responsive hotel-box-img" alt="">
-											</a>
-											<div class="entry-bookmark">
-												<a href="#"><i class="ti-bookmark"></i></a>
+						<?php
+						$conn = mysqli_connect('localhost', 'root', '', 'wisatamalang');
+						$sql = "SELECT * FROM wisata";
+						$result = mysqli_query($conn, $sql);
+
+						if (!$conn) {
+							die("Koneksi gagal: " . mysqli_connect_error());
+						}
+
+						while ($row = mysqli_fetch_assoc($result)) {
+							?>
+
+							<div class="col-md-12 col-sm-12">
+								<article class="hotel-box list-style">
+									<div class="row">
+
+										<div class="col-md-5 col-sm-5">
+											<div class="hotel-box-image">
+												<a href="content.php">
+													<img src=<?php echo $row["image"]; ?>"
+													class="img-responsive hotel-box-img" alt="">
+												</a>
+												<div class="entry-bookmark">
+													<a href="#"><i class="ti-bookmark"></i></a>
+												</div>
+												<h4 class="hotel-place">
+													<a href="#">
+														<?php echo $row["tourism"]; ?>
+													</a>
+												</h4>
+												<!-- <span class="featured-tour"><i class="fa fa-star"></i></span> -->
 											</div>
-											<h4 class="hotel-place">
-												<a href="#">Mount Bromo</a>
-											</h4>
-											<span class="featured-tour"><i class="fa fa-star"></i></span>
 										</div>
-									</div>
 
-									<div class="col-md-7 col-sm-7">
-										<div class="inner-box">
-											<div class="box-inner-ellipsis">
-												<div style="margin: 0px; padding: 0px; border: 0px;">
-													<h3 class="entry-title">
-														<a href="content.php">Gunung Bromo</a>
-													</h3>
-													<div class="entry-content">
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-															sed nisl in lectus euismod convallis.</p>
-														<span class="price"> <strong class="theme-cl">Rp350.000,-</strong>
-															/ Person</span>
-													</div>
-												</div>
-											</div>
-
-											<div class="entry-meta">
-												<div class="meta-item meta-author">
-													<div class="hotel-review entry-location">
-														<span class="review-status bg-info"><i class="ti-check"></i></span>
-														<h6><span class="cl-info font-bold">superb</span>13.625 Review
-														</h6>
-													</div>
-												</div>
-												<div class="meta-item meta-comment fl-right">
-													<div class="view-box">
-														<div class="fl-right">
-															<span><i class="ti-eye padd-r-5"></i>5782</span>
+										<div class="col-md-7 col-sm-7">
+											<div class="inner-box">
+												<div class="box-inner-ellipsis">
+													<div style="margin: 0px; padding: 0px; border: 0px;">
+														<h3 class="entry-title">
+															<a href="content.php">
+																<?php echo $row["tourism"]; ?>
+															</a>
+														</h3>
+														<div class="entry-content">
+															<p>
+																<?php echo $row["description"]; ?>
+															</p>
+															<span class="price"> <strong
+																class="theme-cl"><?php echo $row["price"]; ?></strong></span>
 														</div>
 													</div>
 												</div>
-												<div class="meta-item meta-rating fl-right">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-half"></i>
-												</div>
-											</div>
-										</div>
-									</div>
 
-								</div>
-
-							</article>
-						</div>
-
-						<!-- DATA 2 -->
-						<div class="col-md-12 col-sm-12">
-							<article class="hotel-box list-style">
-								<div class="row">
-
-									<div class="col-md-5 col-sm-5">
-										<div class="hotel-box-image">
-											<a href="content.php">
-												<img src="https://media-cdn.tripadvisor.com/media/photo-s/16/57/f2/eb/berlokasi-di-timurnya.jpg" class="img-responsive hotel-box-img" alt="">
-											</a>
-											<div class="entry-bookmark">
-												<a href="#"><i class="ti-bookmark"></i></a>
-											</div>
-											<h4 class="hotel-place">
-												<a href="#">Sumber Maron</a>
-											</h4>
-										</div>
-									</div>
-
-									<div class="col-md-7 col-sm-7">
-										<div class="inner-box">
-											<div class="box-inner-ellipsis">
-												<div style="margin: 0px; padding: 0px; border: 0px;">
-													<h3 class="entry-title">
-														<a href="content.php">Sumber Maron</a>
-													</h3>
-													<div class="entry-content">
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-															sed nisl in lectus euismod convallis.</p>
-														<span class="price"> <strong class="theme-cl">Rp15.000,-</strong>
-															/ Person</span>
-													</div>
-												</div>
-											</div>
-
-											<div class="entry-meta">
-												<div class="meta-item meta-author">
-													<div class="hotel-review entry-location">
-														<span class="review-status bg-success"><i class="ti-check"></i></span>
-														<h6><span class="cl-success font-bold">Good</span>5062 Review
-														</h6>
-													</div>
-												</div>
-												<div class="meta-item meta-comment fl-right">
-													<div class="view-box">
-														<div class="fl-right">
-															<span><i class="ti-eye padd-r-5"></i>1782</span>
+												<div class="entry-meta">
+													<div class="meta-item meta-author">
+														<div class="hotel-review entry-location">
+															<span class="review-status bg-info"><i
+																	class="ti-check"></i></span>
+															<h6><span class="cl-info font-bold"><?php echo $row["rate"]; ?></span><?php echo $row["review"]; ?>
+															</h6>
 														</div>
 													</div>
-												</div>
-												<div class="meta-item meta-rating fl-right">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-half"></i>
-												</div>
-											</div>
-										</div>
-									</div>
-
-								</div>
-
-							</article>
-						</div>
-
-						<!-- DATA 3 -->
-						<div class="col-md-12 col-sm-12">
-							<article class="hotel-box list-style">
-								<div class="row">
-
-									<div class="col-md-5 col-sm-5">
-										<div class="hotel-box-image">
-											<a href="content.php">
-												<img src="https://asset.kompas.com/crops/I7oFQpIqNNTHErjAoGMfvNL3asg=/0x0:1149x766/750x500/data/photo/2021/08/25/6126168e3be6b.jpg" class="img-responsive hotel-box-img" alt="">
-											</a>
-											<div class="entry-bookmark">
-												<a href="#"><i class="ti-bookmark"></i></a>
-											</div>
-											<h4 class="hotel-place">
-												<a href="#">Coban Rondo Waterfall</a>
-											</h4>
-											<span class="featured-tour"><i class="fa fa-star"></i></span>
-										</div>
-									</div>
-
-									<div class="col-md-7 col-sm-7">
-										<div class="inner-box">
-											<div class="box-inner-ellipsis">
-												<div style="margin: 0px; padding: 0px; border: 0px;">
-													<h3 class="entry-title">
-														<a href="content.php">Coban Rondo</a>
-													</h3>
-													<div class="entry-content">
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-															sed nisl in lectus euismod convallis.</p>
-														<span class="price"> <strong class="theme-cl">Rp30.000,-</strong>
-															/ Person</span>
-													</div>
-												</div>
-											</div>
-
-											<div class="entry-meta">
-												<div class="meta-item meta-author">
-													<div class="hotel-review entry-location">
-														<span class="review-status bg-info"><i class="ti-check"></i></span>
-														<h6><span class="cl-info font-bold">superb</span>10062 Review
-														</h6>
-													</div>
-												</div>
-												<div class="meta-item meta-comment fl-right">
-													<div class="view-box">
-														<div class="fl-right">
-															<span><i class="ti-eye padd-r-5"></i>7254</span>
+													<div class="meta-item meta-comment fl-right">
+														<div class="view-box">
+															<div class="fl-right">
+																<span><i class="ti-eye padd-r-5"></i><?php echo $row["views"]; ?></span>
+															</div>
 														</div>
 													</div>
-												</div>
-												<div class="meta-item meta-rating fl-right">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-half"></i>
+													<div class="meta-item meta-rating fl-right">
+														<span><?php echo $row["star"]; ?></span>
+													</div>
 												</div>
 											</div>
 										</div>
+
 									</div>
 
-								</div>
+								</article>
+							</div>
+						<?php }
+						mysqli_close($conn);
+						?>
 
-							</article>
-						</div>
-
-						<!-- DATA 5 -->
-						<div class="col-md-12 col-sm-12">
-							<article class="hotel-box list-style">
-								<div class="row">
-
-									<div class="col-md-5 col-sm-5">
-										<div class="hotel-box-image">
-											<a href="content.php">
-												<img src="https://sikidang.com/wp-content/uploads/Lembah-Indah-Malang.jpg" class="img-responsive hotel-box-img" alt="">
-											</a>
-											<div class="entry-bookmark">
-												<a href="#"><i class="ti-bookmark"></i></a>
-											</div>
-											<h4 class="hotel-place">
-												<a href="#">Beautiful Valley</a>
-											</h4>
-											<span class="featured-tour"><i class="fa fa-star"></i></span>
-										</div>
-									</div>
-
-									<div class="col-md-7 col-sm-7">
-										<div class="inner-box">
-											<div class="box-inner-ellipsis">
-												<div style="margin: 0px; padding: 0px; border: 0px;">
-													<h3 class="entry-title">
-														<a href="content.php">Lembah Indah</a>
-													</h3>
-													<div class="entry-content">
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-															sed nisl in lectus euismod convallis.</p>
-														<span class="price"> <strong class="theme-cl">Rp200.000,-</strong>
-															/ Person</span>
-													</div>
-												</div>
-											</div>
-
-											<div class="entry-meta">
-												<div class="meta-item meta-author">
-													<div class="hotel-review entry-location">
-														<span class="review-status bg-warning"><i class="ti-check"></i></span>
-														<h6><span class="cl-warning font-bold">fair</span>1050 Review
-														</h6>
-													</div>
-												</div>
-												<div class="meta-item meta-comment fl-right">
-													<div class="view-box">
-														<div class="fl-right">
-															<span><i class="ti-eye padd-r-5"></i>2412</span>
-														</div>
-													</div>
-												</div>
-												<div class="meta-item meta-rating fl-right">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-half"></i>
-												</div>
-											</div>
-										</div>
-									</div>
-
-								</div>
-
-							</article>
-						</div>
-
-						<!-- DATA 5 -->
-						<div class="col-md-12 col-sm-12">
-							<article class="hotel-box list-style">
-								<div class="row">
-
-									<div class="col-md-5 col-sm-5">
-										<div class="hotel-box-image">
-											<a href="content.php">
-												<img src="https://img.okezone.com/content/2021/01/30/408/2353645/camping-seru-di-bukit-nirwana-dengan-pesona-10-gunung-di-sekelilingnya-c2V9qrglsZ.jpg" class="img-responsive hotel-box-img" alt="">
-											</a>
-											<div class="entry-bookmark">
-												<a href="#"><i class="ti-bookmark"></i></a>
-											</div>
-											<h4 class="hotel-place">
-												<a href="#">Nirwana Hill</a>
-											</h4>
-										</div>
-									</div>
-
-									<div class="col-md-7 col-sm-7">
-										<div class="inner-box">
-											<div class="box-inner-ellipsis">
-												<div style="margin: 0px; padding: 0px; border: 0px;">
-													<h3 class="entry-title">
-														<a href="content.php">Bukit Nirwana</a>
-													</h3>
-													<div class="entry-content">
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-															sed nisl in lectus euismod convallis.</p>
-														<span class="price"> <strong class="theme-cl">Rp10.000,-</strong>
-															/ Person</span>
-													</div>
-												</div>
-											</div>
-
-											<div class="entry-meta">
-												<div class="meta-item meta-author">
-													<div class="hotel-review entry-location">
-														<span class="review-status bg-success"><i class="ti-check"></i></span>
-														<h6><span class="cl-success font-bold">Good</span>6439 Review
-														</h6>
-													</div>
-												</div>
-												<div class="meta-item meta-comment fl-right">
-													<div class="view-box">
-														<div class="fl-right">
-															<span><i class="ti-eye padd-r-5"></i>2541</span>
-														</div>
-													</div>
-												</div>
-												<div class="meta-item meta-rating fl-right">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-half"></i>
-												</div>
-											</div>
-										</div>
-									</div>
-
-								</div>
-
-							</article>
-						</div>
-
-						<!-- DATA 6 -->
-						<div class="col-md-12 col-sm-12">
-							<article class="hotel-box list-style">
-								<div class="row">
-
-									<div class="col-md-5 col-sm-5">
-										<div class="hotel-box-image">
-											<a href="content.php">
-												<img src="https://asset.kompas.com/crops/HGlbthzzHaizmQYD3Eyfm5GTF-8=/0x0:739x493/750x500/data/photo/2020/07/26/5f1d21fd082c6.jpg" class="img-responsive hotel-box-img" alt="">
-											</a>
-											<div class="entry-bookmark">
-												<a href="#"><i class="ti-bookmark"></i></a>
-											</div>
-											<h4 class="hotel-place">
-												<a href="#">Balekambang Beach</a>
-											</h4>
-											<span class="featured-tour"><i class="fa fa-star"></i></span>
-										</div>
-									</div>
-
-									<div class="col-md-7 col-sm-7">
-										<div class="inner-box">
-											<div class="box-inner-ellipsis">
-												<div style="margin: 0px; padding: 0px; border: 0px;">
-													<h3 class="entry-title">
-														<a href="content.php">Pantai Balekambang</a>
-													</h3>
-													<div class="entry-content">
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-															sed nisl in lectus euismod convallis.</p>
-														<span class="price"> <strong class="theme-cl">Rp25.000,-</strong>
-															/ Person</span>
-													</div>
-												</div>
-											</div>
-
-											<div class="entry-meta">
-												<div class="meta-item meta-author">
-													<div class="hotel-review entry-location">
-														<span class="review-status bg-info"><i class="ti-check"></i></span>
-														<h6><span class="cl-info font-bold">superb</span>9541 Review
-														</h6>
-													</div>
-												</div>
-												<div class="meta-item meta-comment fl-right">
-													<div class="view-box">
-														<div class="fl-right">
-															<span><i class="ti-eye padd-r-5"></i>1215</span>
-														</div>
-													</div>
-												</div>
-												<div class="meta-item meta-rating fl-right">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-half"></i>
-												</div>
-											</div>
-										</div>
-									</div>
-
-								</div>
-
-							</article>
-						</div>
-
-					</div>
 					<!-- /Row -->
 
 					<div class="row">
@@ -874,7 +564,8 @@
 						Timur 65145</p>
 					<p><i class="fa fa-phone"></i> Phone: (0341) 551611</p>
 					<p><i class="fa fa-whatsapp"></i> Whatsapp: +6281312345678</p>
-					<p><i class="fa fa-envelope"></i> Email: <a href="mailto:hello@domain.com" style="color:black;">wisatamalang@tourism.com</a></p>
+					<p><i class="fa fa-envelope"></i> Email: <a href="mailto:hello@domain.com"
+							style="color:black;">wisatamalang@tourism.com</a></p>
 
 				</div>
 
@@ -950,7 +641,8 @@
 										In With Facebook</a>
 								</div>
 								<div class="col-md-6">
-									<a href="#" title="" class="gplus-log-btn log-btn"><i class="fa fa-google-plus"></i>Sign In With Google+</a>
+									<a href="#" title="" class="gplus-log-btn log-btn"><i
+											class="fa fa-google-plus"></i>Sign In With Google+</a>
 								</div>
 							</div>
 
@@ -992,7 +684,8 @@
 										In With Facebook</a>
 								</div>
 								<div class="col-md-6">
-									<a href="#" title="" class="gplus-log-btn log-btn"><i class="fa fa-google-plus"></i>Sign In With Google+</a>
+									<a href="#" title="" class="gplus-log-btn log-btn"><i
+											class="fa fa-google-plus"></i>Sign In With Google+</a>
 								</div>
 							</div>
 
@@ -1043,7 +736,7 @@
 	</script>
 
 	<script type="text/javascript">
-		$(document).ready(function() {
+		$(document).ready(function () {
 			$('#styleOptions').styleSwitcher();
 		});
 	</script>
