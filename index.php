@@ -8,7 +8,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
   <title>WisataMalang</title>
   <link rel="icon" href="assetsindex/images/thumb.png" type="image/png">
@@ -53,24 +54,50 @@
             <ul class="nav">
               <?php
               session_start(); // Start the session
-
+              
               // Check if the 'username' key exists in the $_SESSION array
               if (!isset($_SESSION['username'])) {
-              ?>
+                ?>
                 <li><a href="register.php"><b>SIGN UP</b></a></li>
                 <li><a href="login.php"><b>LOG IN</b></a></li>
-              <?php
+                <?php
               } else {
+                ?>
+                <?php
+                $mysqli = mysqli_connect("localhost", "root", "", "wisatamalang");
+                $query = "SELECT profile_picture FROM user WHERE username = '{$_SESSION['username']}'";
+                $result = mysqli_query($mysqli, $query);
+                $row = mysqli_fetch_assoc($result);
+                $profilePictureName = $row['profile_picture'];
+                ?>
 
-              ?>
-                <li><a><b>Welcome, <?php echo $_SESSION['username']; ?></b></a></li>
-                <li><a href="logout.php"><b>LOG OUT</b></a></li>
-              <?php
+                <ul class="navbar-nav ms-auto ms-md 0 me-3 me-lg-4">
+                  <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <b>Welcome,
+                        <?php echo $_SESSION['username']; ?>
+
+                      </b>
+                      <?php
+                      echo "<img src='profile_pictures/$profilePictureName' alt='Profile Picture' class='rounded-circle' style='height: 30px; width: 30px;'>";
+                      ?>
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li><a href="logout.php"><b>LOG OUT</b></a></li>
+                    </ul>
+
+
+                  </li>
+                </ul>
+                <?php
               }
               ?>
             </ul>
             <a class='menu-trigger'>
-              <span>Menu</span>
+              <!-- <span>Menu</span> -->
             </a>
             <!-- ***** Menu End ***** -->
           </nav>
@@ -104,7 +131,8 @@
               </div> -->
               <div class="col-lg-9 align-self-center">
                 <fieldset>
-                  <input type="address" name="address" class="searchText" placeholder="Destinasimu" autocomplete="on" required>
+                  <input type="address" name="address" class="searchText" placeholder="Destinasimu" autocomplete="on"
+                    required>
                 </fieldset>
               </div>
               <!-- <div class="col-lg-3 align-self-center">
@@ -134,8 +162,10 @@
                 Zoo</a></li>
             <li><a href="listing.php"><span class="icon"><img src="assetsindex/images/brush.png" alt="Vehicle"></span>
                 Museum</a></li>
-            <li><a href="listing.php"><span class="icon"><img src="assetsindex/images/controller.png" alt="Shopping"></span> Playground</a></li>
-            <li><a href="listing.php"><span class="icon"><img src="assetsindex/images/food-apple.png" alt="Travel"></span> Garden</a></li>
+            <li><a href="listing.php"><span class="icon"><img src="assetsindex/images/controller.png"
+                    alt="Shopping"></span> Playground</a></li>
+            <li><a href="listing.php"><span class="icon"><img src="assetsindex/images/food-apple.png"
+                    alt="Travel"></span> Garden</a></li>
           </ul>
         </div>
       </div>
@@ -211,7 +241,9 @@
                             </div>
                             <div class="col-lg-7 align-self-center">
                               <div class="right-image">
-                                <img src="assetsindex/images/embun-es-selimuti-gunung-bromo-suhu-capai-2-derajat-celsius-t6VNmOXwJ7.jpg" alt="">
+                                <img
+                                  src="assetsindex/images/embun-es-selimuti-gunung-bromo-suhu-capai-2-derajat-celsius-t6VNmOXwJ7.jpg"
+                                  alt="">
                               </div>
                             </div>
                           </div>
@@ -308,7 +340,8 @@
                                   lacinia nulla quis mauris rhoncus, et pharetra velit dignissim. Sed bibendum, elit ac
                                   fringilla venenatis, eros purus fringilla libero, sed mollis mauris lacus sed diam.
                                 </p>
-                                <div class="main-white-button"><a rel="nofollow" href="content.php"><i class="fa fa-eye"></i> Discover More</a></div>
+                                <div class="main-white-button"><a rel="nofollow" href="content.php"><i
+                                      class="fa fa-eye"></i> Discover More</a></div>
                               </div>
                             </div>
                             <div class="col-lg-7 align-self-center">

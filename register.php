@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <script type="application/x-javascript">
+  <script type="application/x-javascript">
         addEventListener("load", function() {
             setTimeout(hideURLbar, 0);
         }, false);
@@ -26,7 +26,7 @@
   <section>
     <div class="form-container">
       <h1>SIGN UP</h1>
-      <form action="" method="POST">
+      <form action="register_handler.php" method="POST" enctype="multipart/form-data">
         <?php
         session_start();
         if (isset($_SESSION['error_code'])) {
@@ -38,38 +38,43 @@
           unset($_SESSION['error_message']);
         }
         ?>
-        <?php if (isset($error_code)) : ?>
+        <?php if (isset($error_code)): ?>
           <p class="error">
             <?php echo "Error code: " . $error_code; ?>
           </p>
         <?php endif; ?>
-        <?php if (isset($error_message)) : ?>
+        <?php if (isset($error_message)): ?>
           <p class="error">
             <?php echo $error_message; ?>
           </p>
         <?php endif; ?>
         <div class="control">
           <label for="name">Username</label>
-          <input type="username" name="username" id="name" required/>
+          <input type="text" name="username" id="name" required />
         </div>
         <div class="control">
           <label for="pass">Password</label>
-          <input type="password" name="password" id="pass" required/>
+          <input type="password" name="password" id="pass" required />
+        </div>
+        <div class="control">
+          <label for="profile_picture">Profile Picture</label>
+          <input type="file" name="profile_picture" id="profile_picture" accept="image/*" required />
         </div>
         <span><input type="checkbox" required="" /> I Agree To The Terms & Conditions</span>
         <div class="control">
-          <input type="submit" value="Register" formaction="register_handler.php" />
+          <input type="submit" value="Register" />
         </div>
         <div class="link">
-        <p>Already have account?</p>
+          <p>Already have an account?</p>
         </div>
         <div class="link">
-        <a href="login.php"> Login Now!</a></p>
+          <a href="login.php">Login Now!</a>
         </div>
       </form>
     </div>
   </section>
 </body>
+
 
 <footer id="footer">
   <div class="footer-top">
@@ -112,7 +117,8 @@
         </div>
         <div class="col-md-7 footer-menu">
           <nav class="navbar navbar-dark navbar-expand-md">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
           </nav>

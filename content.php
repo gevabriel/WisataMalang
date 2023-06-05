@@ -1,11 +1,3 @@
-<?php
-
-// include 'reviews_handler.php';
-
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,13 +5,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 	<title>Tour Detail</title>
 	<link rel="icon" href="assetscontent/img/thumb.png" type="image/png">
-
 	<!-- Plugins CSS -->
 	<link rel="stylesheet" href="assetscontent/plugins/css/plugins.css">
-
 	<!-- Custom style -->
 	<link href="assetscontent/css/style.css" rel="stylesheet">
 	<link href="assetscontent/css/responsiveness.css" rel="stylesheet">
@@ -51,12 +40,9 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="navbar-menu">
 
-
-
 				<ul class="nav navbar-nav navbar-right">
 					<?php
 					session_start(); // Start the session
-					
 					// Check if the 'username' key exists in the $_SESSION array
 					if (!isset($_SESSION['username'])) {
 						?>
@@ -64,11 +50,19 @@
 						<li><a href="login.php"><b>LOG IN</b></a></li>
 						<?php
 					} else {
-
 						?>
+
 						<li><a><b>Welcome,
-									<?php echo $_SESSION['username']; ?>
-								</b></a></li>
+						<?php echo $_SESSION['username']; ?>
+						<?php
+						$mysqli = mysqli_connect("localhost", "root", "", "wisatamalang");
+						$query = "SELECT profile_picture FROM user WHERE username = '{$_SESSION['username']}'";
+						$result = mysqli_query($mysqli, $query);
+						$row = mysqli_fetch_assoc($result);
+						$profilePictureName = $row['profile_picture'];
+						echo "<img src='profile_pictures/$profilePictureName' alt='Profile Picture' class='rounded-circle' style='height: 30px; width: 30px;'>";
+						?>
+						</b></a></li>
 						<li><a href="logout.php"><b>LOG OUT</b></a></li>
 						<?php
 					}
@@ -550,14 +544,14 @@
 											?>
 											<div class="review-box">
 												<div class="review-thumb">
-														<img src="assetscontent/img/user-5.jpg"
-															class="img-responsive img-circle" alt="" />
-													</div>
+													<img src="assetscontent/img/user-5.jpg"
+														class="img-responsive img-circle" alt="" />
+												</div>
 
 												<div class="review-box-content">
 													<div class="reviewer-rate">
-															<p><i class="fa fa-star cl-warning"></i>4.8/<span>5</span></p>
-														</div>
+														<p><i class="fa fa-star cl-warning"></i>4.8/<span>5</span></p>
+													</div>
 													<div class="review-user-info">
 														<h4>
 															<?php echo $row["guest"]; ?>
@@ -567,9 +561,9 @@
 														</p>
 													</div>
 													<div class="review-lc text-right">
-															<a href="#"><i class="ti-heart"></i>80</a>
-															<a href="#"><i class="ti-comment"></i>70</a>
-														</div>
+														<a href="#"><i class="ti-heart"></i>80</a>
+														<a href="#"><i class="ti-comment"></i>70</a>
+													</div>
 												</div>
 
 											</div>
@@ -589,7 +583,7 @@
 											<form action="" method="POST">
 												<h4>Comment</h4>
 												<input name="guest" id="guest" placeholder="Nama"
-													style="height: auto; width: 750px; border-radius: 5px;"> <br>
+													style="height: auto; width: 750px; border-radius: 5px;" required> <br>
 												<textarea name="comment" id="comment" placeholder="Komentar"
 													style="height: 100px; width: 750px; border-radius: 5px;"></textarea>
 												<br>
@@ -1087,34 +1081,6 @@
 		</div>
 	</div>
 	<!-- End Sign Up Window -->
-
-	<!-- Switcher -->
-	<button class="w3-button w3-teal w3-xlarge w3-right" onclick="openRightMenu()"><i class="spin theme-cl fa fa-cog"
-			aria-hidden="true"></i></button>
-	<div class="w3-sidebar w3-bar-block w3-card-2 w3-animate-right" style="display:none;right:0;" id="rightMenu">
-		<button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large theme-bg">Close &times;</button>
-		<ul id="styleOptions" title="switch styling">
-			<li>
-				<a href="javascript: void(0)" class="cl-box cl-default" data-theme="skins/default"></a>
-			</li>
-			<li>
-				<a href="javascript: void(0)" class="cl-box cl-red" data-theme="skins/red"></a>
-			</li>
-			<li>
-				<a href="javascript: void(0)" class="cl-box cl-green" data-theme="skins/green"></a>
-			</li>
-			<li>
-				<a href="javascript: void(0)" class="cl-box cl-blue" data-theme="skins/blue"></a>
-			</li>
-			<li>
-				<a href="javascript: void(0)" class="cl-box cl-pink" data-theme="skins/pink"></a>
-			</li>
-			<li>
-				<a href="javascript: void(0)" class="cl-box cl-purple" data-theme="skins/purple"></a>
-			</li>
-		</ul>
-	</div>
-	<!-- /Switcher -->
 
 	<!-- =================== START JAVASCRIPT ================== -->
 	<script src="assetscontent/plugins/js/jquery.min.js"></script>

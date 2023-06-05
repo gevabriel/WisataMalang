@@ -56,11 +56,19 @@
 						<li><a href="login.php"><b>LOG IN</b></a></li>
 						<?php
 					} else {
-
 						?>
+
 						<li><a><b>Welcome,
-									<?php echo $_SESSION['username']; ?>
-								</b></a></li>
+						<?php echo $_SESSION['username']; ?>
+						<?php
+						$mysqli = mysqli_connect("localhost", "root", "", "wisatamalang");
+						$query = "SELECT profile_picture FROM user WHERE username = '{$_SESSION['username']}'";
+						$result = mysqli_query($mysqli, $query);
+						$row = mysqli_fetch_assoc($result);
+						$profilePictureName = $row['profile_picture'];
+						echo "<img src='profile_pictures/$profilePictureName' alt='Profile Picture' class='rounded-circle' style='height: 30px; width: 30px;'>";
+						?>
+						</b></a></li>
 						<li><a href="logout.php"><b>LOG OUT</b></a></li>
 						<?php
 					}
@@ -445,8 +453,7 @@
 															<p>
 																<?php echo $row["description"]; ?>
 															</p>
-															<span class="price"> <strong
-																class="theme-cl"><?php echo $row["price"]; ?></strong></span>
+															<span class="price"> <strong class="theme-cl"><?php echo $row["price"]; ?></strong></span>
 														</div>
 													</div>
 												</div>
@@ -456,19 +463,26 @@
 														<div class="hotel-review entry-location">
 															<span class="review-status bg-info"><i
 																	class="ti-check"></i></span>
-															<h6><span class="cl-info font-bold"><?php echo $row["rate"]; ?></span><?php echo $row["review"]; ?>
+															<h6><span class="cl-info font-bold">
+																	<?php echo $row["rate"]; ?>
+																</span>
+																<?php echo $row["review"]; ?>
 															</h6>
 														</div>
 													</div>
 													<div class="meta-item meta-comment fl-right">
 														<div class="view-box">
 															<div class="fl-right">
-																<span><i class="ti-eye padd-r-5"></i><?php echo $row["views"]; ?></span>
+																<span><i class="ti-eye padd-r-5"></i>
+																	<?php echo $row["views"]; ?>
+																</span>
 															</div>
 														</div>
 													</div>
 													<div class="meta-item meta-rating fl-right">
-														<span><?php echo $row["star"]; ?></span>
+														<span>
+															<?php echo $row["star"]; ?>
+														</span>
 													</div>
 												</div>
 											</div>
@@ -482,34 +496,34 @@
 						mysqli_close($conn);
 						?>
 
-					<!-- /Row -->
+						<!-- /Row -->
 
-					<div class="row">
-						<ul class="pagination">
-							<li class="page-item">
-								<a class="page-link" href="#" aria-label="Previous">
-									<span class="ti-arrow-left"></span>
-									<span class="sr-only">Previous</span>
-								</a>
-							</li>
-							<li class="page-item"><a class="page-link" href="#">1</a></li>
-							<li class="page-item"><a class="page-link" href="#">2</a></li>
-							<li class="page-item active"><a class="page-link" href="#">3</a></li>
-							<li class="page-item"><a class="page-link" href="#">4</a></li>
-							<li class="page-item"><a class="page-link" href="#">5</a></li>
-							<li class="page-item">
-								<a class="page-link" href="#" aria-label="Next">
-									<span class="ti-arrow-right"></span>
-									<span class="sr-only">Next</span>
-								</a>
-							</li>
-						</ul>
+						<div class="row">
+							<ul class="pagination">
+								<li class="page-item">
+									<a class="page-link" href="#" aria-label="Previous">
+										<span class="ti-arrow-left"></span>
+										<span class="sr-only">Previous</span>
+									</a>
+								</li>
+								<li class="page-item"><a class="page-link" href="#">1</a></li>
+								<li class="page-item"><a class="page-link" href="#">2</a></li>
+								<li class="page-item active"><a class="page-link" href="#">3</a></li>
+								<li class="page-item"><a class="page-link" href="#">4</a></li>
+								<li class="page-item"><a class="page-link" href="#">5</a></li>
+								<li class="page-item">
+									<a class="page-link" href="#" aria-label="Next">
+										<span class="ti-arrow-right"></span>
+										<span class="sr-only">Next</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+
 					</div>
 
 				</div>
-
 			</div>
-		</div>
 	</section>
 	<!-- =========== End All Hotel In Grid View =================== -->
 
