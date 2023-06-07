@@ -74,9 +74,7 @@
                       aria-expanded="false">
                       <b>Welcome,
                         <?php echo $_SESSION['username']; ?>
-                        <?php
-                        include 'profilpicture.php';
-                        ?>
+
                       </b>
                       <?php
                       echo "<img src='profile_pictures/$profilePictureName' alt='Profile Picture' class='rounded-circle' style='height: 30px; width: 30px;'>";

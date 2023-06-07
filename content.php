@@ -51,18 +51,16 @@
 						<?php
 					} else {
 						?>
+						<?php
+						include 'profilpicture.php';
+						?>
 
 						<li><a><b>Welcome,
-						<?php echo $_SESSION['username']; ?>
-						<?php
-						$mysqli = mysqli_connect("localhost", "root", "", "wisatamalang");
-						$query = "SELECT profile_picture FROM user WHERE username = '{$_SESSION['username']}'";
-						$result = mysqli_query($mysqli, $query);
-						$row = mysqli_fetch_assoc($result);
-						$profilePictureName = $row['profile_picture'];
-						echo "<img src='profile_pictures/$profilePictureName' alt='Profile Picture' class='rounded-circle' style='height: 30px; width: 30px;'>";
-						?>
-						</b></a></li>
+									<?php echo $_SESSION['username']; ?>
+									<?php
+									echo "<img src='profile_pictures/$profilePictureName' alt='Profile Picture' class='img-circle' style='height: 30px; width: 30px;'>";
+									?>
+								</b></a></li>
 						<li><a href="logout.php"><b>LOG OUT</b></a></li>
 						<?php
 					}
