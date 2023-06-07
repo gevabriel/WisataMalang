@@ -58,15 +58,15 @@
 					} else {
 						?>
 						<?php
-                		include 'profilpicture.php';
-                		?>
+						include 'profilpicture.php';
+						?>
 
 						<li><a><b>Welcome,
-						<?php echo $_SESSION['username']; ?>
-						<?php
-                      	echo "<img src='profile_pictures/$profilePictureName' alt='Profile Picture' class='img-circle' style='height: 30px; width: 30px;'>";
-                      	?>
-						</b></a></li>
+									<?php echo $_SESSION['username']; ?>
+									<?php
+									echo "<img src='profile_pictures/$profilePictureName' alt='Profile Picture' class='img-circle' style='height: 30px; width: 30px;'>";
+									?>
+								</b></a></li>
 						<li><a href="logout.php"><b>LOG OUT</b></a></li>
 						<?php
 					}
@@ -451,7 +451,9 @@
 															<p>
 																<?php echo $row["description"]; ?>
 															</p>
-															<span class="price"> <strong class="theme-cl"><?php echo $row["price"]; ?></strong></span>
+															<span class="price"> <strong class="theme-cl">
+																	<?php echo $row["price"]; ?>
+																</strong></span>
 														</div>
 													</div>
 												</div>
